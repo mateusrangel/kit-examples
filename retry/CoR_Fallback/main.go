@@ -19,7 +19,7 @@ func NewPaymentProcessor(pg domain.PaymentGateway, next *PaymentProcessor) *Paym
 }
 
 func (p *PaymentProcessor) ProcessPayment(ctx context.Context, input *domain.PaymentGatewayInput) (*domain.PaymentGatewayOutput, error) {
-	output, err := retry.Execute(
+	output, err := retry.Exponentially(
 		ctx,
 		func() (*domain.PaymentGatewayOutput, error) {
 			return p.pg.ProcessTransaction(ctx, &domain.PaymentGatewayInput{CardToken: "1234", Amount: "99.00"})

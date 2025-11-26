@@ -14,7 +14,7 @@ func main() {
 	// Run within avaiable time
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
-	_, err := retry.Execute(ctx, func() (*domain.PaymentGatewayOutput, error) {
+	_, err := retry.Linearly(ctx, func() (*domain.PaymentGatewayOutput, error) {
 		return pg.ProcessTransaction(ctx, &domain.PaymentGatewayInput{CardToken: "1234", Amount: "99.00"})
 	}, 2, 2*time.Second)
 	if err != nil {
@@ -24,7 +24,7 @@ func main() {
 	//timeouts
 	ctx, cancel = context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
-	_, err = retry.Execute(ctx, func() (*domain.PaymentGatewayOutput, error) {
+	_, err = retry.Linearly(ctx, func() (*domain.PaymentGatewayOutput, error) {
 		return pg.ProcessTransaction(ctx, &domain.PaymentGatewayInput{CardToken: "1234", Amount: "99.00"})
 	}, 2, 2*time.Second)
 	if err != nil {
