@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mateusrangel/kit-examples/internal/domain"
+	"github.com/mateusrangel/kit-examples/retry/domain"
 	"github.com/mateusrangel/kit/retry"
 )
 
