@@ -3,9 +3,9 @@ package service
 import (
 	"fmt"
 
+	"github.com/mateusrangel/kit-examples/fsm/internal/domain"
+	"github.com/mateusrangel/kit-examples/fsm/internal/infra/repository"
 	"github.com/mateusrangel/kit/fsm"
-	"github.com/mateusrangel/kit/fsm/internal/domain"
-	"github.com/mateusrangel/kit/fsm/internal/infra/repository"
 )
 
 // States

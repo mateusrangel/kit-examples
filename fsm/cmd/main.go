@@ -4,10 +4,10 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
+	"github.com/mateusrangel/kit-examples/fsm/internal/application/service"
+	"github.com/mateusrangel/kit-examples/fsm/internal/domain"
+	"github.com/mateusrangel/kit-examples/fsm/internal/infra/repository"
 	"github.com/mateusrangel/kit/fsm"
-	"github.com/mateusrangel/kit/fsm/internal/application/service"
-	"github.com/mateusrangel/kit/fsm/internal/domain"
-	"github.com/mateusrangel/kit/fsm/internal/infra/repository"
 )
 
 func main() {

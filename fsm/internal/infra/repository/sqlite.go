@@ -3,7 +3,7 @@ package repository
 import (
 	"database/sql"
 
-	"github.com/mateusrangel/kit/fsm/internal/domain"
+	"github.com/mateusrangel/kit-examples/fsm/internal/domain"
 	_ "modernc.org/sqlite"
 )
 

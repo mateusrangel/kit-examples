@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/mateusrangel/kit/fsm/internal/domain"
+import "github.com/mateusrangel/kit-examples/fsm/internal/domain"
 
 type DisputeRepotistory interface {
 	CreateDispute(d *domain.Dispute) error
